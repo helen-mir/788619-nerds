@@ -148,4 +148,15 @@ a {
   background-color: #e5a722;
 }
 
+.about-us-title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.orders-title, 
+.statistics-info b {
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
