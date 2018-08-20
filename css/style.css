@@ -49,6 +49,39 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.studio-features {
+  background-color: #eeeeee;
+}
+
+.studio-features-list {
+  list-style: none;
+}
+
+.studio-features-item h3 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.studio-features-item a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #fb565a;
+}
+
+.studio-features-item a:hover,
+.studio-features-item a:focus {
+  background-color: #e74246;
+}
+
+.studio-features-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #d7373b;
+}
 
 
 
