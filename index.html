@@ -18,7 +18,9 @@
   			<li><a href="contacts.html">Контакты</a></li>
   		  </ul>
   		  <ul class="shopping-navigation">
-            <li class="shopping-cart-link"><a href="cart.html">Корзина</a></li>
+            <li class="shopping-cart-link">
+            	<a href="cart.html">Корзина</a>
+            </li>
           </ul>
   		</nav>
   	  </div>
@@ -112,7 +114,7 @@
   		  <h2 class="visually-hidden">Наши партнеры</h2>
   		  <ul class="partners-items">
   		    <li>
-  			  <a href="#"><img src="img/logo-1.png" width="199" height="68" alt="Логотип html-academy"></a>
+  			  <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1.png" width="199" height="68" alt="Логотип html-academy"></a>
   			</li>
   			<li>
   			  <a href="#"><img src="img/logo-2.png" width="209" height="90" alt="Логотип borodinski"></a>
@@ -136,7 +138,9 @@
   		  <p>тел. +7(812)275-75-75</p>
   		  <a class="btn" href="#">Напишите нам</a>
   	    </div>
-  	    <img src="img/map.jpg"> <!--как разместить значок нерд на карте?-->
+  	    <p>
+  	      <img src="img/map.jpg" width="1439" height="416" alt="Офис компании по адресу ул.Большая Конюшенная, д.19/8, Санкт-Петербург"> <!--как разместить значок нерд на карте?-->
+  	    </p>
   	  </div>
   	  <div class="container">
   	  	<div class="footer-wrapper">
@@ -154,9 +158,24 @@
   	    </div>
   	  </div>
   	</footer>
-  	<div class="feedback-form">
+  	<div class="feedback">
       <h2>Напишите нам</h2>
-      <!-- Место для формы -->
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      	<p class="feedback-item">
+      	  <label for="feedback-name">Ваше имя:</label>
+      	  <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+        </p>
+        <p class="feedback-item">
+          <label for="feedback-email">Ваш e-mail:</label>
+      	  <input id="feedback-email" type="email" name="email" value="" placeholder="email@example.com">
+        </p>
+        <p class="feedback-item">
+          <label for="feedback-text-of-the-letter">Текст письма:</label>
+      	  <input id="feedback-text-of-the-letter" type="text" name="text-of-the-letter" value="" placeholder="В свободной форме">  
+      	</p>  
+      	<button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </div>
   </body>
 </html>

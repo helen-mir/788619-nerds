@@ -18,7 +18,9 @@
   			<li><a href="contacts.html">Контакты</a></li>
   		  </ul>
   		  <ul class="shopping-navigation">
-            <li class="shopping-cart-link"><a href="cart.html">Корзина</a></li>
+            <li class="shopping-cart-link">
+            	<a href="cart.html">Корзина</a>
+            </li>
           </ul>
   		</nav>
   	  </div>
@@ -30,33 +32,58 @@
   	    </div>
   	  </div>
       <div class="main-container">
-
-          <!-- Форма будет дорабатываться -->
   	    <section class="filters">
   	  	  <h2 class="visually-hidden">Фильтр товаров</h2>
-  	  	  <div class="filter-group">
-            <h3 class="filters-title">Стоимость</h3>
-          </div>
-          <div class="filter-group">
-            <h3 class="filters-title">Сетка</h3>
-            <ul class="filters-list">
-          	  <li>Адаптивная</li>
-          	  <li>Фиксированная</li>
-          	  <li>Резиновая</li>
-            </ul>
-          </div>
-          <div class="filter-group">
-            <h3 class="filters-title">Особенности</h3>
-            <ul class="filters-list">
-          	  <li>Слайдер</li>
-          	  <li>Блок преимуществ</li>
-          	  <li>Новости</li>
-          	  <li>Галерея</li>
-          	  <li>Корзина</li>
-            </ul>
-          </div>
+  	  	    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset>
+              	<legend>Стоимость</legend>
+              </fieldset>
+              <fieldset>
+                <legend>Сетка</legend>
+                <ul class="filters-list">
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+          	      	<label for="filter-adaptive">Адаптивная</label>
+          	      </li>
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="fixed" id="filter-fixed">
+          	      	<label for="filter-fixed">Фиксированная</label>
+          	      </li>
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="rubber" id="filter-rubber">
+          	      	<label for="filter-rubber">Резиновая</label>
+          	      </li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Особенности</legend>
+                <ul class="filters-list">
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+          	      	<label for="filter-slider">Слайдер</label>
+          	      </li>
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantage-block" id="filter-advantage-block">
+          	      	<label for="filter-advantage-block">Блок преимуществ</label>
+          	      </li>
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+          	      	<label for="filter-news">Новости</label>
+          	      </li>
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+          	      	<label for="filter-gallery">Галерея</label>
+          	      </li>
+          	      <li>
+          	      	<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="shopping-cart" id="filter-shopping-cart">
+          	      	<label for="filter-shopping-cart">Корзина</label>
+          	      </li>
+                </ul>
+              </fieldset>
+              <button type="submit" class="filter-button button">Показать</button>
+            </form>
 	    </section>
-          <!-- Форма будет дорабатываться -->
+          
 
 	    <section class="catalog">
 		  <h2 class="visually-hidden">Каталог</h2>
@@ -76,10 +103,10 @@
             </ul>
             <ul class="sorting-range">
               <li>
-                <a class="sotring-range-down" href="#">Сортировка по убыванию</a>
+                <button class="button sorting-button sorting-button-down" type="button">Сортировка по убыванию</button>
               </li>
               <li>
-                <a class="sotring-range-up" href="#">Сортировка по возрастанию</a>
+                <button class="button sorting-button sorting-button-up" type="button">Сортировка по возрастанию</button>
               </li>
             </ul>
           </div>
@@ -170,9 +197,24 @@
   	    </div>
   	  </div>
   	</footer>
-  	<div class="feedback-form">
+  	<div class="feedback">
       <h2>Напишите нам</h2>
-      <!-- Место для формы -->
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      	<p class="feedback-item">
+      	  <label for="feedback-name">Ваше имя:</label>
+      	  <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+        </p>
+        <p class="feedback-item">
+          <label for="feedback-email">Ваш e-mail:</label>
+      	  <input id="feedback-email" type="email" name="email" value="" placeholder="email@example.com">
+        </p>
+        <p class="feedback-item">
+          <label for="feedback-text-of-the-letter">Текст письма:</label>
+      	  <input id="feedback-text-of-the-letter" type="text" name="text-of-the-letter" value="" placeholder="В свободной форме">  
+      	</p>  
+      	<button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </div>
   </body>
 </html>
