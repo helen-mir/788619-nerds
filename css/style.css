@@ -83,5 +83,65 @@ a {
   background-color: #d7373b;
 }
 
+.products-list {
+  list-style: none;
+}
+
+.products-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase; 
+}
+
+.btn a:active {
+  color: rgba(255, 255, 255, 0.03);
+}
+
+.btn-web {
+  background-color: #fb565a;
+}
+
+.btn-web a:hover,
+.btn-web a:focus {
+  background-color: #e74246; 
+}
+
+.btn-web a:active {
+  background-color: #d7373b;
+}
+
+.btn-app {
+  background-color: #00ca74;
+}
+
+.btn-app a:hover,
+.btn-app a:focus {
+  background-color: #00bc6c; 
+}
+
+.btn-app a:active {
+  background-color: #00aa62;
+}
+
+.btn-presentation {
+  background-color: #efc84a;
+}
+
+.btn-presentation a:hover,
+.btn-presentation a:focus {
+  background-color: #eab534;  
+}
+
+.btn-presentation a:active {
+  background-color: #e5a722;
+}
 
 
