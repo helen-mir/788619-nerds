@@ -83,6 +83,20 @@ a {
   background-color: #d7373b;
 }
 
+/*картинки почему-то не подключились*/
+
+.studio-features-item-1 {
+  background-image: url("img/slide1.png");
+}
+
+.studio-features-item-2 {
+  background-image: url("img/slider2.png");
+}
+
+.studio-features-item-3 {
+  background-image: url("img/slider3.png");
+}
+
 .products-list {
   list-style: none;
 }
