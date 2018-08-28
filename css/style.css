@@ -15,7 +15,16 @@ a {
   text-decoration: none;
 }
 
+.main-header {
+  width: 100%
+  margin-bottom: 18px;
+
+  background-color: #eeeeee;
+}
+
 .main-navigation {
+  display: flex;
+
   font-size: 16px;
   line-height: 30px;
   font-weight: 500; 
@@ -25,9 +34,28 @@ a {
   background-color: #eeeeee;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1160px;
+  margin-right: 140px;
+  margin-left: 140px;
+}
+
 .site-navigation,
 .shopping-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation {
+  width: 441px; 
+}
+
+.shopping-navigation {
+  width: 115px; 
 }
 
 .site-navigation a,
@@ -47,8 +75,16 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+
 .studio-features {
+  width: 100%;
   background-color: #eeeeee;
+}
+
+.container-studio-feachers {
+  width: 1160px;
+  margin-left: 140px;
+  margin-right: 140px;
 }
 
 .studio-features-list {
@@ -81,8 +117,6 @@ a {
   background-color: #d7373b;
 }
 
-/*картинки почему-то не подключились*/
-
 .studio-features-item-1 {
   background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
@@ -98,8 +132,28 @@ a {
   background-repeat: no-repeat;
 }
 
+.main-container {
+  width: 1160px;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.products {
+  margin-bottom: 80px;
+}
+
 .products-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 1100px;
+
   list-style: none;
+}
+
+.products-item {
+  width: 300px;
 }
 
 .products-item h3 {
@@ -163,6 +217,21 @@ a {
   background-color: #e5a722;
 }
 
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin-bottom: 43px;
+}
+
+.about-us-info {
+  width: 660px;
+}
+
+.about-us-stats {
+  width: 360px;
+}
+
 .about-us-title {
   font-size: 45px;
   line-height: 1.2;
@@ -187,7 +256,14 @@ a {
  color: #283136;
 }
 
+.partners {
+  width: 1160px;
+}
+
 .partners-list {
+  display: flex;
+  justify-content: space-between;
+
   list-style: none;
 }
 
@@ -210,6 +286,10 @@ a {
   font-weight: 500;
 
   text-align: center;
+}
+
+.main-container-catalog {
+  display: flex;
 }
 
 .filter-group legend {
@@ -349,6 +429,9 @@ a {
   border: #efefef;
 }
 
+.footer-contacts {
+  width: 319px;
+}
 
 .footer-contacts b {
   font-size: 18px;
@@ -377,8 +460,18 @@ a {
   color: #444444;
 }
 
-.footer-social-buttons { 
+.footer-social-buttons {
+  order: -1;
+  margin-right: 139px;
   list-style: none;
+}
+
+.social {
+  display: flex;
+}
+
+.footer-wrapper {
+  margin-bottom: 70px;
 }
 
 .feedback h2 {
@@ -401,3 +494,7 @@ a {
 .feedback-form .btn {
   background-color: #fb565a;
 }
+
+
+
+
