@@ -15,9 +15,17 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden{
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 .main-header {
-  width: 100%
-  margin-bottom: 18px;
 
   background-color: #eeeeee;
 }
@@ -34,13 +42,16 @@ a {
   background-color: #eeeeee;
 }
 
+.main-header-logo {
+ width: 160px;
+ margin-right: auto;
+}
+
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1160px;
-  margin-right: 140px;
-  margin-left: 140px;
+  width: 1200px;
+  padding: 0 20;
+  margin-bottom: 80px;
+  margin: 0 auto;
 }
 
 .site-navigation,
@@ -77,17 +88,14 @@ a {
 
 
 .studio-features {
-  width: 100%;
   background-color: #eeeeee;
 }
 
-.container-studio-feachers {
-  width: 1160px;
-  margin-left: 140px;
-  margin-right: 140px;
-}
-
 .studio-features-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 
@@ -117,50 +125,63 @@ a {
   background-color: #d7373b;
 }
 
+.studio-features-item {
+  width: 100%;
+  background-position: right;
+}
+
 .studio-features-item-1 {
   background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
 }
 
 .studio-features-item-2 {
+  display: none;
+
   background-image: url("../img/slide-2.png");
   background-repeat: no-repeat;
 }
 
 .studio-features-item-3 {
+  display: none;
+
   background-image: url("../img/slide-3.png");
   background-repeat: no-repeat;
 }
 
-.main-container {
-  width: 1160px;
-  margin-left: 140px;
-  margin-right: 140px;
-}
 
 .products {
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .products-list {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  width: 1100px;
+
+  /* если я прописываю flex-wrap: wrap; одна лишка смещается на вторую строчку */
 
   list-style: none;
 }
 
 .products-item {
   width: 300px;
+  margin-right: 100px;
+  margin-top: 31px;
+  margin-bottom: 41px;
 }
 
 .products-item h3 {
+  margin-top: 28px;
+  margin-bottom: 23px;
+
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.products-item p {
+  margin-bottom: 26px;
 }
 
 .btn {
@@ -220,19 +241,28 @@ a {
 .about-us {
   display: flex;
   justify-content: space-between;
-  width: 1160px;
   margin-bottom: 43px;
 }
 
 .about-us-info {
+  padding-top: 80px;
   width: 660px;
 }
 
+.about-us-info p {
+  margin-bottom: 46px;
+  margin-top: 36px;
+}
+
 .about-us-stats {
+  padding-top: 40px;
   width: 360px;
 }
 
 .about-us-title {
+  margin-bottom: 36px;
+  border-spacing: 0 16px;
+
   font-size: 45px;
   line-height: 1.2;
   font-weight: 500;
@@ -242,6 +272,11 @@ a {
 .statistics-info b {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.statistics-info b {
+  margin-top: 38px;
+  margin-bottom: 49px;
 }
 
 .statistics td {
@@ -257,16 +292,22 @@ a {
 }
 
 .partners {
-  width: 1160px;
+  padding-bottom: 48px;
 }
 
 .partners-list {
   display: flex;
-  justify-content: space-between;
 
   list-style: none;
 }
 
+/* Какаое значение маргин райт, если все отступы справа разные?
+
+.partners-link:not(:nth-of-type(4n)) {
+margin-right: значение;
+}
+
+*/
 .partners-link img {
   opacity: 0.2;
 }
@@ -286,11 +327,20 @@ a {
   font-weight: 500;
 
   text-align: center;
+
+  background-color: #eeeeee;
 }
 
 .main-container-catalog {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
 }
+
+.filters {
+  width: 260px;
+  padding-top: 61px;
+ }
 
 .filter-group legend {
   font-size: 18px;
@@ -338,6 +388,15 @@ a {
   opacity: 0.3;
 }
 
+.catalog {
+  width: 760px;
+  padding-top: 58px;
+}
+
+.catalog-sorting {
+  display: flex;
+}
+
 .catalog-sorting b {
   font-weight: 700;
   text-transform: uppercase;
@@ -351,12 +410,19 @@ a {
 }
 
 .sorting-buttons {
+  display: flex;
+
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
+.sorting-range {
+  display: flex;
+}
+
 .sorting-btn {
+  margin-right: 25px;
   color: rgba(0,0,0,0.3); 
 }
 
@@ -377,6 +443,27 @@ a {
   text-align: center;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+
+  list-style: none;
+}
+
+.catalog-item {
+  width: 360px;
+  margin-top: 58px;
+  margin-bottom: 34px;
+  margin-right: 40px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
+}
+
 .price-btn {
   background-color: #fb565a;
 }
@@ -392,6 +479,8 @@ a {
 }
 
 .description-hover {
+  display: none;
+
   background-color: #eeeeee;
   opacity: 0;
 }
@@ -402,7 +491,15 @@ a {
  }
 
 .pagination-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
   list-style: none;
+}
+
+.pagination-item {
+  margin-right: 11px;
 }
 
 .pagination-item a {
@@ -450,28 +547,40 @@ a {
   background-color: #fb565a;
 }
 
+.discount {
+  width: 544px;
+  margin-top: 78px;
+}
+
 .discount b {
+  margin-top: 78px;
+  margin-bottom: 13px;
+
   font-size: 36px;
   line-height: 36px;
 }
 
 .discount p {
+  margin-bottom: 78px;
+
   line-height: 22px;
   color: #444444;
 }
 
 .footer-social-buttons {
   order: -1;
-  margin-right: 139px;
+  width: 259px;
+  margin: 0px;
+  margin-top: 68px;
+  margin-right: 140px;
+
   list-style: none;
 }
 
-.social {
-  display: flex;
-}
 
 .footer-wrapper {
-  margin-bottom: 70px;
+  display: flex;
+  margin-bottom: 78px;
 }
 
 .feedback h2 {
