@@ -820,7 +820,7 @@ img {
 .catalog-item {
   position: relative;
   width: 360px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   margin-right: 40px;
 
   background-color: #ffffff;
@@ -828,6 +828,18 @@ img {
 
 .catalog-item:nth-child(2n) {
   margin-right: 0;
+}
+
+.catalog-item::before { /*как при наведении курсора сделать прозрачность?*/
+  content: "";
+  position: absolute;
+  top: -39px;
+  left: 0;
+  width: 360px;
+  height: 40px;
+  background-image: url("../img/browser.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .catalog-item p {
