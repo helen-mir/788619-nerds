@@ -485,18 +485,12 @@ img {
   opacity: 0.1;
 }
 
-.main-catalog {
-  box-shadow: 0 0 0 3px yellow;
-}
 
 
 /*что-то не так с отступами или разметкой, фон заливается не так как нужно, не могу понять что*/
 .page-title-wrapper {
 
   background-color: #eeeeee;
-
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
 }
 
 .page-title-wrapper h1 {
@@ -508,9 +502,6 @@ img {
   font-weight: 500;
 
   text-align: center;
-
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
 }
 
 .main-container-catalog {
