@@ -887,9 +887,12 @@ img {
   background-repeat: no-repeat;
 }
 
-.catalog-item-title {
+.description-hover h3 {
+  margin: 0;
   margin-bottom: 26px;
-  margin-top: 35px;
+}
+
+.catalog-item-title {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -942,21 +945,24 @@ img {
   box-shadow: 0 0 25px -4px;
 }
 
-.catalog-item p {
+.description-hover p {
   display: block;
+  margin: 0;
   margin-bottom: 31px;
 }
 
-.catalog-item .description-hover {
-  display: none;
+.description-hover {
 
   position: absolute;
   left: 0;
   bottom: 0;
   width: 360px;
-  height: 231px;
+  min-height: 231px;
   margin: 0;
-  padding: 0;
+  padding-bottom: 43px;
+  padding-top: 35px;
+  padding-left: 67px;
+  padding-right: 67px;
   text-align: center;
 
   background-color: #eeeeee;
@@ -968,9 +974,8 @@ img {
  }
 
  .price-btn {
-  width: 200px;
-  margin-left: 80px;
-  margin-bottom: 43px;
+  padding: 18px 60px;
+  
   background-color: #fb565a;
 }
 
