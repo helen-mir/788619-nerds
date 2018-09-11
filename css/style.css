@@ -544,8 +544,6 @@ img {
   padding-top: 80px;
 
   background-color: #eeeeee;
-
-  box-shadow: 0 0 0 2px green;
 }
 
 .page-title-wrapper h1 {
@@ -811,8 +809,6 @@ img {
   display: flex;
   margin: 0;
   margin-bottom: 57px;
-
-  box-shadow: 0 0 0 2px yellow;
 }
 
 .catalog-sorting b {
@@ -838,8 +834,6 @@ img {
   margin-right: 62px;
   margin-left: 267px;
   padding: 0;
-
-  box-shadow: 0 0 0 2px green;
 }
 
 .sorting-option {
@@ -847,8 +841,6 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: rgba(0,0,0,0.3); 
-
-  box-shadow: 0 0 0 2px blue;
 }
 
 .sorting-option:hover,
@@ -862,8 +854,6 @@ img {
   margin: 0;
   padding: 0;
   width: 41px;
-
-  box-shadow: 0 0 0 2px green;
 }
 
 .sorting-option:active {
@@ -872,8 +862,6 @@ img {
 
 .sorting-range li {
   width: 12px;
-
-  box-shadow: 0 0 0 2px red;
 }
 /*картинки подключила, но они не видны, почему?*/
 .sorting-btn-up {
