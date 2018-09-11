@@ -5,11 +5,15 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
+  font-stretch: expanded;
   font-weight: 400;
   color: #000000;
 
   background-color: #ffffff;
 }
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
 a {
   text-decoration: none;
@@ -42,7 +46,6 @@ img {
 
 .main-navigation {
   display: flex;
-  justify-content: space-between;
 
   font-size: 16px;
   line-height: 30px;
@@ -54,16 +57,16 @@ img {
 }
 
 .main-header-logo {
- width: 160px;
- margin-right: 202px;
- margin-top: 49px;
+   margin-top: 50px;
+   margin-right: 201px;
+   width: 165px;
+   height: 70px;
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 .site-navigation,
@@ -71,28 +74,34 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 76px;
 }
 
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 500px; 
+  margin-right: 244px;
+  width: 450px; 
 }
 
 .shopping-navigation {
   display: flex;
   max-width: 116px; 
+  text-align: center;
+}
+
+.site-navigation li {
+  margin-right: 46px;
+}
+
+.site-navigation li:nth-child(4n) {
+  margin-right: 0;
 }
 
 .site-navigation a,
 .shopping-navigation a {
   display: block;
-  margin-top: 80px;
-  margin-bottom: 10px;
-  margin-right: 24px;
-  margin-left: 24px;
 
-  vertical-align: middle;
   color: #000000;
 }
 
@@ -110,7 +119,7 @@ img {
   border-bottom: 2px solid #fb565a;
 }
 
-.shopping-navigation .shopping-cart-link {
+.shopping-cart-link {
   position: relative;
   padding-left: 42px;
 }
@@ -126,9 +135,7 @@ img {
 
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
 }
-
 
 .slider {
   position: relative;
@@ -187,13 +194,13 @@ img {
 
 .slider-item {
   display: none;
-  padding: 78px 0 80px 0;
+  padding: 72px 0 80px 0;
 }
 
 .slider-item:nth-child(1) {
   background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
-  background-position: 93% 18px;
+  background-position: 93% 14px;
 }
 
 .slider-item:nth-child(2) {
@@ -239,7 +246,7 @@ img {
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   font-size: 55px;
   line-height: 55px;
@@ -249,36 +256,47 @@ img {
 .slider-item p {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .btn {
-  display: block;
-  width: 240px;
-  padding: 13px 0;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 17px;
+  padding-bottom: 15px;
   
   font-size: 16px;
   line-height: 18px;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  color: #ffffff;
   
   border-radius: 3px;
   border: none;
 }
 
-.slider-item .btn {
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slider-item-btn {
   color: #ffffff;
+  padding-left: 54px;
+  padding-right: 55px;
 
   background-color: #fb565a;
 }
 
-.slider-item .btn:hover,
-.slider-item .btn:focus {
+.slider-item-btn:hover,
+.slider-item-btn:focus {
   background-color: #e74246;
 }
 
-.slider-item .btn:active {
+.slider-item-btn:active {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #d7373b;
@@ -286,7 +304,9 @@ img {
 }
 
 .products {
-  padding-bottom: 80px;
+  padding: 80px 0;
+
+   border-bottom:2px solid #eeeeee; 
 }
 
 .products-list {
@@ -300,9 +320,7 @@ img {
 
 .products-item {
   width: 300px;
-  margin-top: 80px;
   margin-right: 100px;
-  margin-bottom: 41px;
 }
 
 .products-item:nth-child(3n) {
@@ -310,8 +328,8 @@ img {
 }
 
 .products-item h3 {
-  margin-top: 28px;
-  margin-bottom: 23px;
+  margin-top: 18px;
+  margin-bottom: 16px;
 
 
   font-size: 24px;
@@ -321,22 +339,16 @@ img {
 }
 
 .products-item p {
-  margin-bottom: 26px;
+  margin-bottom: 32px;
+
+  width: 260px;
 }
 
-.btn {
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  color: #ffffff;
-  vertical-align: middle;
-  text-transform: uppercase; 
-
-  border: none;
-}
-
-.btn:active {
-  color: rgba(255, 255, 255, 0.3);
+.btn-web,
+.btn-app,
+.btn-presentation {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .btn-web {
@@ -381,18 +393,22 @@ img {
 .about-us {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 43px;
+  padding-bottom: 80px;
+
+  border-bottom: 2px solid #eeeeee;
 }
 
 .about-us-info {
-  padding-top: 80px;
+  padding-top: 74px;
   width: 660px;
 }
 
-.about-us-info p {
-  margin-bottom: 46px;
-  margin-top: 36px;
-}
+.orders-title {
+  margin-top: 38px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-transform: uppercase; 
+} 
 
 .about-us-stats {
   padding-top: 40px;
@@ -400,29 +416,48 @@ img {
 }
 
 .about-us-stats img {
-  margin-bottom: 39px;
+  margin-bottom: 29px;
 }
 
 .about-us-title {
-  margin-bottom: 36px;
+  display: block;
+  margin-bottom: 34px;
   border-spacing: 0 16px;
 
   font-size: 45px;
-  line-height: 1.2;
+  line-height: 45px;
   font-weight: 500;
 }
 
-.orders-title {
-  font-weight: 700;
-  text-transform: uppercase; 
-} 
+.orders-list {
+  margin: 0;
+  padding-left: 36px;
+}
 
-/*не получается сделать отступы в .statistics-info, не работают*/
+.orders-item {
+  position: relative;
+  margin-bottom: 24px;
+
+  list-style: none;
+}
+
+.orders-item::after {
+  content: "";
+
+  position: absolute;
+  top: 11px;
+  left: -36px;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #fb565a;
+}
 
 .statistics-info b {
   display: block;
   text-align: center;
-  margin-bottom: 49px;
+  margin-bottom: 38px;
 
   font-weight: 700;
   text-transform: uppercase;
@@ -430,12 +465,11 @@ img {
 
 .statistics {
   width: 360px;
-  border-spacing:  20px; /*не понимаю как сделать правильно*/
 }
 
 .statistics td {
   font-size: 45px;
-  line-height: 10.06px;
+  line-height: 45px;
   font-weight: 700;
 }
 
@@ -450,26 +484,46 @@ img {
 }
 
 .partners {
-  padding-bottom: 48px;
+  margin-bottom: 80px;
+
+  border-bottom: 2px solid #eeeeee; 
 }
 
 .partners-list {
   display: flex;
   flex-wrap: wrap;
+  padding: 40px 0;
   margin: 0;
-  padding: 0;
 
   list-style: none;
+}
+
+.partners-link:not(:nth-child(4n)) {
+  margin-right: 30px;
 }
 
 .partners-link {
   display: block;
   width: 260px;
-  margin-right: 40px;
 }
-/* один элемент перескакивает на другую строку, почему?*/
-.partners-link:nth-child(4n) {
-  margin-right: 0;
+
+.partners-item {
+  position: relative;
+}
+
+.partners-item::after {
+  content: "";
+
+  position: absolute;
+  top: 35px;
+  left: 280px;
+
+  width: 2px;
+  height: 52px;
+
+  background-color: #eeeeee;
+
+  /*как убрать псевдоэлемент к последнему элементу?*/
 }
 
 .partners-link img {
@@ -485,18 +539,18 @@ img {
   opacity: 0.1;
 }
 
-
-
-/*что-то не так с отступами или разметкой, фон заливается не так как нужно, не могу понять что*/
 .page-title-wrapper {
+  padding-bottom: 116px;
+  padding-top: 80px;
 
   background-color: #eeeeee;
+
+  box-shadow: 0 0 0 2px green;
 }
 
 .page-title-wrapper h1 {
   display: block;
-  margin-bottom: 116px;
-  margin-top: 80px;
+  margin: 0;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -563,66 +617,11 @@ img {
   user-select: none;
 }
 
-.filter-input-checkbox + label::before {
-  content: "";
-  position: absolute;
-  left: -37px;
-  top: 0;
-
-  width: 19px;
-  height: 19px;
-
-  border: 2px solid #a6a6a6;
-  border-radius: 3px;
-}
-
-.filter-input-checkbox:checked + label::after {
-  content: "";
-
-  position: absolute;
-  top: 0px;
-  left: -37px;
-
-  width: 26px;
-  height: 23px;
-  
-  background-image: url(../img/checkbox-on.svg); /*как сделать картинку серой?*/
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-radio + label::before {
-  content: "";
-
-  position: absolute;
-  left: -37px;
-  top: -3px;
-
-  width: 17px;
-  height: 17px;
-  
-  border: 4px solid #a6a6a6;
-  border-radius: 50%;
-}
-
-.filter-input-radio:checked + label::after {
-  content: "";
-
-  position: absolute;
-  top: 5px;
-  left: -29px;
-
-  width: 9px;
-  height: 9px;
-
-  background-color: #a6a6a6;
-  border-radius: 50%;
-}
 
 .range-controls {
   position: relative;
   
-  height: 41px;
+  height: 80px;
   margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
@@ -663,7 +662,7 @@ img {
 }
 
 .range-controls .toggle-min {
-  left: 15px;
+  left: 18px;
 }
 
 .range-controls .toggle-max {
@@ -683,7 +682,7 @@ img {
 }
 
 .price-controls input {
-  width: 60px;
+  width: 80px;
   padding: 8px 10px;
   margin-left: 10px;
   
@@ -701,8 +700,78 @@ img {
   text-align: right;
 }
 
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -37px;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+}
+/*я запуталась в классах, как правильно записать состояния при наведении и не активное*/
+.filter-input:focus + label,
+.filter-input-chekbox:hover:before {
+  opacity: 1;
+}
+
+
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -37px;
+  top: -3px;
+
+  width: 25px;
+  height: 25px;
+  
+  border: 4px solid #a6a6a6;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -29px;
+
+  width: 9px;
+  height: 9px;
+
+  background-color: #a6a6a6;
+  border-radius: 50%;
+}
+
+.filter-input:focus + label::before,
+.filter-label:hover::before {
+  opacity: 1;
+}
+
+
+.filter-input:disabled + label::before {
+  opacity: 0.1;
+}
+
+.filter-input:disabled + .filter-label {
+  opacity: 0.3;
+}
 
 .filter-button {
+  padding-left: 88px;
+  padding-right: 88px;
   color: #000000;
 
   background-color: #eeeeee;
@@ -742,9 +811,13 @@ img {
   display: flex;
   margin: 0;
   margin-bottom: 57px;
+
+  box-shadow: 0 0 0 2px yellow;
 }
 
 .catalog-sorting b {
+  padding: 0;
+  margin: 0;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -760,24 +833,26 @@ img {
   display: flex;
   justify-content: space-between;
   width: 271px;
+  align-items: flex-end;
   margin: 0;
-  margin-right: 48px;
+  margin-right: 62px;
   margin-left: 267px;
   padding: 0;
+
+  box-shadow: 0 0 0 2px green;
 }
 
-.sorting-btn {
-  margin: 0;
-  padding: 0;
-
+.sorting-option {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: rgba(0,0,0,0.3); 
+
+  box-shadow: 0 0 0 2px blue;
 }
 
-.sorting-btn:hover,
-.sorting-btn:active {
+.sorting-option:hover,
+.sorting-option:active {
   color: rgba(0,0,0,0.6);
 }
 
@@ -787,14 +862,29 @@ img {
   margin: 0;
   padding: 0;
   width: 41px;
+
+  box-shadow: 0 0 0 2px green;
 }
 
-.sorting-btn:active {
+.sorting-option:active {
  color: #000000;
 }
 
-.sorting-range .btn {
-  width: 11px;
+.sorting-range li {
+  width: 12px;
+
+  box-shadow: 0 0 0 2px red;
+}
+/*картинки подключила, но они не видны, почему?*/
+.sorting-btn-up {
+  background-image: url(../img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.sorting-btn-down {
+  background-image: url(../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
 }
 
 .catalog-item-title {
@@ -830,7 +920,7 @@ img {
   margin-right: 0;
 }
 
-.catalog-item::before { /*как при наведении курсора сделать прозрачность?*/
+.catalog-item::before { 
   content: "";
   position: absolute;
   top: -39px;
@@ -840,6 +930,16 @@ img {
   background-image: url("../img/browser.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.12;
+}
+
+.catalog-item:hover:before {
+  opacity: 1;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  box-shadow: 0 0 25px -4px;
 }
 
 .catalog-item p {
@@ -904,11 +1004,6 @@ img {
   width: 240px;
 }
 
-.pagination-item-current {
-  border: 3px solid #dbdbdb;
-  border-radius: 3px;
-}
-
 .pagination-item a {
   display: block;
   padding: 19px 0;
@@ -934,29 +1029,35 @@ img {
   background-color: #d5d5d5;
 }
 
-.pagination-item-current a {
+.pagination-item-current a { /*все равно что-то не то*/
   background-color: #ffffff;
-  border: #efefef;
+
+  border: 3px solid #dbdbdb;
+  border-radius: 3px;
+ 
 }
 
 .map {
   position: relative;
   width: 100%;
   height: 416px;
+
+  background-color: #f1efe8;
 }
 
 .map img {
-  width: 100%;
-
-  background-color: #f1efe8;
+   display: block;
+   margin: 0 auto;
 }
 
 .footer-contacts {
   position: absolute;
   top: 54px;
   left: 140px;
-  margin: 0;
-  padding: 0;
+  padding-top: 51px;
+  padding-bottom: 47px;
+  padding-right: 50px;
+  padding-left: 50px;
   width: 319px;
 
   background-color: #ffffff;
@@ -964,9 +1065,9 @@ img {
 
 .footer-contacts b {
   display: block;
-  margin-left: 50px;
-  margin-top: 54px;
-  margin-bottom: 34px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
 
   font-size: 18px;
   line-height: 30px;
@@ -976,7 +1077,9 @@ img {
 
 .footer-contacts p {
   display: block;
-  margin-left: 50px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 19px;
 
   font-size: 16px;
   line-height: 18px;
@@ -984,28 +1087,33 @@ img {
 }
 
 .footer-contacts .btn {
-  margin-left: 50px;
-  margin-bottom: 37px;
-  margin-top: 37px;
-  width: 219px;
+  margin-top: 17px;
+  padding-left: 43px;
+  padding-right: 44px;
 
   background-color: #fb565a;
 }
 
 .discount {
-  width: 544px;
+  width: 550px;
   margin-top: 78px;
 }
 
 .discount b {
-  margin-top: 78px;
-  margin-bottom: 13px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 
   font-size: 36px;
   line-height: 36px;
+  font-weight: 700;
 }
 
 .discount p {
+  display: block;
+  margin: 0;
+  padding: 0;
   margin-bottom: 78px;
 
   line-height: 22px;
@@ -1053,27 +1161,115 @@ background-color: #d7373b;
   margin-bottom: 78px;
 }
 
+.feedback {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  padding-bottom: 84px;
+  padding-left: 100px; 
+  padding-right: 100px;
+  padding-top: 73px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
 .feedback h2 {
+  margin: 0;
+  margin-bottom: 50px;
+
   font-size: 45px;
   line-height: 45px;
   font-weight: 500px;
 }
 
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .feedback-item {
+  margin: 0;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 700; 
 }
 
 .feedback-item input {
+  padding: 14px 16px;
   line-height: 18px;
-  color: #444444;
+  color: rgba(68, 68, 68, 0.5);
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.feedback-item label {
+  display: block;
+  margin-bottom: 13px;
+}
+
+.feedback-name,
+.feedback-email {
+  width: 360px;
+  margin-bottom: 36px;
+}
+
+.feedback-text {
+  margin-bottom: 47px;
+  width: 760px;
+  min-height: 118px;
+  vertical-align: top;
+/*как расположить текст подсказки вверху, а не по центру?*/
 }
 
 .feedback-form .btn {
+  
+  padding: 18px 84px;
+
+  line-height: 18px;
+
   background-color: #fb565a;
 }
 
+.modal-close {
+  position: absolute;
+  top: 78px;
+  right: 89px;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
 
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 1px;
+
+  width: 19px;
+  height: 3px;
+
+  background-color: #fecccd;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
 
 

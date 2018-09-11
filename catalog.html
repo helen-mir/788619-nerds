@@ -38,7 +38,7 @@
         <div class="main-container-catalog">
   	      <section class="filters">
   	  	    <h2 class="visually-hidden">Фильтр товаров</h2>
-  	  	      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+  	  	      <form method="get" action="https://echo.htmlacademy.ru">
                 <fieldset class="filter-group">
               	  <legend>Стоимость:</legend>
                   <div class="range-filter">
@@ -109,21 +109,21 @@
               <b>Сортировать:</b>
 		      <ul class="sorting-buttons">
                 <li>
-                  <a class="sorting-btn" href="#">По цене</a>
+                  <a class="sorting-option" href="#">По цене</a>
                 </li>
                 <li>
-                  <a class="sorting-btn" href="#">По типу</a>
+                  <a class="sorting-option" href="#">По типу</a>
                 </li>
                 <li>
-                  <a class="sorting-btn" href="#">По названию</a>
+                  <a class="sorting-option" href="#">По названию</a>
                 </li>
               </ul>
               <ul class="sorting-range">
                 <li>
-                  <a class="btn sorting-btn sorting-btn-down" href="#"><span class="visually-hidden">Сортировка по убыванию</span></a>
+                  <a class="sorting-btn-down" href="#"><span class="visually-hidden">Сортировка по убыванию</span></a>
                 </li>
                 <li>
-                  <a class="btn sorting-btn sorting-btn-up"><span class="visually-hidden">Сортировка по возрастанию</span></a>
+                  <a class="sorting-btn-up"><span class="visually-hidden">Сортировка по возрастанию</span></a>
                 </li>
               </ul>
             </div>
@@ -224,19 +224,19 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       	<p class="feedback-item">
       	  <label for="feedback-name">Ваше имя:</label>
-      	  <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+      	  <input class="feedback-name" id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
         </p>
         <p class="feedback-item">
           <label for="feedback-email">Ваш e-mail:</label>
-      	  <input id="feedback-email" type="email" name="email" value="" placeholder="email@example.com">
+      	  <input class="feedback-email" id="feedback-email" type="email" name="email" value="" placeholder="email@example.com">
         </p>
         <p class="feedback-item">
-          <label for="feedback-text-of-the-letter">Текст письма:</label>
-      	  <input id="feedback-text-of-the-letter" type="text" name="text-of-the-letter" value="" placeholder="В свободной форме">  
+          <label for="feedback-text">Текст письма:</label>
+      	  <input class="feedback-text" id="feedback-text" type="text" name="text-of-the-letter" value="" placeholder="В свободной форме">  
       	</p>  
-      	<button class="button" type="submit">Отправить</button>
+      	<button class="btn" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="btn">Закрыть</button>
     </div>
   </body>
 </html>
