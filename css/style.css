@@ -1155,7 +1155,6 @@ background-color: #d7373b;
 }
 
 .feedback {
-  display: none;
   position: fixed;
   top: 100px;
   left: 50%;
@@ -1199,6 +1198,16 @@ background-color: #d7373b;
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
+}
+
+.feedback-item input:focus { /*не работает*/
+  color: #444444;
+  border: 2px solid #000000;
+}
+
+.feedback-item input:disabled { /*не работает*/
+  color: #e74246
+  border: 2px solid #e74246;
 }
 
 .feedback-item label {
@@ -1264,5 +1273,12 @@ background-color: #d7373b;
 .modal-close::after {
   transform: rotate(-45deg);
 }
+/*изменение цвета не работает*/
+.modal-close:focus:before {
+  background-color: #fb565a;
+}
 
+.modal-close:active:before {
+  background-color: #ffeeee;
+}
 
