@@ -5,7 +5,6 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  font-stretch: expanded;
   font-weight: 400;
   color: #000000;
 
@@ -46,6 +45,7 @@ img {
 
 .main-navigation {
   display: flex;
+ justify-content: space-between; 
 
   font-size: 16px;
   line-height: 30px;
@@ -58,9 +58,7 @@ img {
 
 .main-header-logo {
    margin-top: 50px;
-   margin-right: 201px;
    width: 165px;
-   height: 70px;
 }
 
 .container {
@@ -80,7 +78,7 @@ img {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 244px;
+  margin-right: 35px;
   width: 450px; 
 }
 
@@ -90,12 +88,8 @@ img {
   text-align: center;
 }
 
-.site-navigation li {
-  margin-right: 46px;
-}
-
-.site-navigation li:nth-child(4n) {
-  margin-right: 0;
+.site-navigation li:not(:nth-child(4n)) {
+margin-right: 46px;
 }
 
 .site-navigation a,
@@ -173,8 +167,8 @@ img {
   content: "";
   
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 0;
+  left: 0;
   z-index: 1;
   
   width: 18px;
@@ -241,6 +235,7 @@ img {
   background-color: inherit;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
+  box-sizing: content-box;
 }
 
 .slider-item h3 {
@@ -285,7 +280,7 @@ img {
 
 .slider-item-btn {
   color: #ffffff;
-  padding-left: 54px;
+  padding-left: 55px;
   padding-right: 55px;
 
   background-color: #fb565a;
@@ -304,7 +299,7 @@ img {
 }
 
 .products {
-  padding: 80px 0;
+  padding: 80px 0 40px;
 
    border-bottom:2px solid #eeeeee; 
 }
@@ -321,6 +316,7 @@ img {
 .products-item {
   width: 300px;
   margin-right: 100px;
+  margin-bottom: 40px;
 }
 
 .products-item:nth-child(3n) {
@@ -393,7 +389,7 @@ img {
 .about-us {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 80px;
+  padding-bottom: 49px;
 
   border-bottom: 2px solid #eeeeee;
 }
@@ -437,16 +433,17 @@ img {
 .orders-item {
   position: relative;
   margin-bottom: 24px;
+  padding-left: 36px;
 
   list-style: none;
 }
 
-.orders-item::after {
+.orders-item::before {
   content: "";
 
   position: absolute;
   top: 11px;
-  left: -36px;
+  left: 0;
 
   width: 25px;
   height: 2px;
@@ -468,15 +465,27 @@ img {
 }
 
 .statistics td {
+  position: relative;
+  width: 107px;
+  padding-bottom: 18px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
+ }
+
+.statistics td::after {
+  content: "%";
+
+  position: absolute;
+  font-size: 23px; 
+  bottom: 25px;
 }
 
 .statistics th {
- font-weight: 400;
- line-height: 18px;
- color: #283136;
+   text-align: left;
+   font-weight: 400;
+   line-height: 18px;
+   color: #283136;
 }
 
 .statistics tr {
@@ -492,7 +501,7 @@ img {
 .partners-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 27px 0 18px;
   margin: 0;
 
   list-style: none;
@@ -504,11 +513,22 @@ img {
 
 .partners-link {
   display: block;
-  width: 260px;
 }
 
 .partners-item {
   position: relative;
+  margin-right: 18px;
+  width: 280px;
+}
+
+.partners-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.partners-item:nth-of-type(4n) {
+  margin-right: 0;
+  margin-left: 19px; 
+  width: 260px;
 }
 
 .partners-item::after {
@@ -516,7 +536,7 @@ img {
 
   position: absolute;
   top: 35px;
-  left: 280px;
+  right: 0;
 
   width: 2px;
   height: 52px;
@@ -530,7 +550,7 @@ img {
   opacity: 0.2;
 }
 
-.partners-link:hover img
+.partners-link:hover img,
 .partners-link:focus img {
   opacity: 1;
 }
@@ -540,8 +560,8 @@ img {
 }
 
 .page-title-wrapper {
-  padding-bottom: 116px;
-  padding-top: 80px;
+  padding-bottom: 108px;
+  padding-top: 73px;
 
   background-color: #eeeeee;
 }
@@ -560,11 +580,11 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 60px;
+  padding-top: 55px;
 }
 
 .filters {
   width: 260px;
-  padding-top: 61px;
  }
 
 .filter-group {
@@ -802,7 +822,6 @@ img {
 
 .catalog {
   width: 760px;
-  padding-top: 58px;
 }
 
 .catalog-sorting {
@@ -860,19 +879,26 @@ img {
  color: #000000;
 }
 
-.sorting-range li {
-  width: 12px;
+ .sorting-btn {
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  vertical-align: center;
+  opacity: 0,3;
 }
-/*картинки подключила, но они не видны, почему?*/
+
 .sorting-btn-up {
   background-image: url(../img/icon-up-dir.svg);
   background-repeat: no-repeat;
-  opacity: 0.3;
 }
 
 .sorting-btn-down {
   background-image: url(../img/icon-down-dir.svg);
   background-repeat: no-repeat;
+}
+
+.sorting-btn.active {
+  opacity: 1;
 }
 
 .description-hover h3 {
@@ -916,7 +942,7 @@ img {
   position: absolute;
   top: -39px;
   left: 0;
-  width: 360px;
+  width: 100%;
   height: 40px;
   background-image: url("../img/browser.svg");
   background-repeat: no-repeat;
@@ -940,12 +966,12 @@ img {
 }
 
 .description-hover {
+  display: none;
 
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 360px;
-  min-height: 231px;
+  width: 100%;
   margin: 0;
   padding-bottom: 43px;
   padding-top: 35px;
@@ -994,12 +1020,12 @@ img {
 
 .pagination-item:last-child {
   margin-right: 0;
-  width: 240px;
+  width: 260px;
 }
 
 .pagination-item a {
   display: block;
-  padding: 19px 0;
+  padding: 13px ;
 
   font-size: 18px;
   line-height: 18px;
@@ -1010,11 +1036,13 @@ img {
 
   background-color: #eeeeee;
   border-radius: 3px;
+  border: 3px solid #eeeeee;
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
   background-color: #dfdfdf;
+  border: 3px solid #dfdfdf;
 }
 
 .pagination-item a:active {
@@ -1151,19 +1179,16 @@ background-color: #d7373b;
 
 .footer-wrapper {
   display: flex;
-  margin-bottom: 78px;
 }
 
 .feedback {
+  display: none;
   position: fixed;
-  top: 100px;
+  top: 50%;
   left: 50%;
-  margin-left: -480px;
+  transform: translate(-50%, -50%);
   width: 960px;
-  padding-bottom: 84px;
-  padding-left: 100px; 
-  padding-right: 100px;
-  padding-top: 73px;
+  padding-top: 73px 100px 84px; 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 }
@@ -1274,11 +1299,15 @@ background-color: #d7373b;
   transform: rotate(-45deg);
 }
 /*изменение цвета не работает*/
-.modal-close:focus:before {
+.modal-close:hover:before,
+.modal-close:focus:before,
+.modal-close:hover:after,
+.modal-close:focus:after {
   background-color: #fb565a;
 }
 
-.modal-close:active:before {
+.modal-close:active:before,
+.modal-close:active:after {
   background-color: #ffeeee;
 }
 
