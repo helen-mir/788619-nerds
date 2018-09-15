@@ -45,8 +45,8 @@ img {
 
 .main-navigation {
   display: flex;
- justify-content: space-between; 
-
+  justify-content: space-between; 
+  padding-top: 50px;
   font-size: 16px;
   line-height: 30px;
   font-weight: 500; 
@@ -57,7 +57,6 @@ img {
 }
 
 .main-header-logo {
-   margin-top: 50px;
    width: 165px;
 }
 
@@ -72,7 +71,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 76px;
+  margin-top: 26px;
 }
 
 .site-navigation {
@@ -139,8 +138,8 @@ margin-right: 46px;
 
 .slider-controls {
   position: absolute;
-  left: 50%;
-  bottom: 104px;
+  left: 50%; /*не попадает по перфекту*/
+  bottom: 96px;
   z-index: 100;
   
   width: 160px;
@@ -158,6 +157,7 @@ margin-right: 46px;
   width: 18px;
   height: 18px;
   padding: 8px;
+  margin-right: 17px;
   
   border-radius: 50%;
   cursor: pointer;
@@ -188,13 +188,13 @@ margin-right: 46px;
 
 .slider-item {
   display: none;
-  padding: 72px 0 80px 0;
+  padding: 67px 0 80px 0;
 }
 
 .slider-item:nth-child(1) {
   background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
-  background-position: 93% 14px;
+  background-position: 93% 7px;
 }
 
 .slider-item:nth-child(2) {
@@ -270,6 +270,7 @@ margin-right: 46px;
   
   border-radius: 3px;
   border: none;
+  outline-style: none;
 }
 
 .btn:active {
@@ -427,7 +428,7 @@ margin-right: 46px;
 
 .orders-list {
   margin: 0;
-  padding-left: 36px;
+  padding: 0;
 }
 
 .orders-item {
@@ -515,7 +516,7 @@ margin-right: 46px;
   display: block;
 }
 
-.partners-item {
+.partners-item { /*не попадают по перфекту*/
   position: relative;
   margin-right: 18px;
   width: 280px;
@@ -561,7 +562,7 @@ margin-right: 46px;
 
 .page-title-wrapper {
   padding-bottom: 108px;
-  padding-top: 73px;
+  padding-top: 68px;
 
   background-color: #eeeeee;
 }
@@ -580,7 +581,7 @@ margin-right: 46px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 60px;
-  padding-top: 55px;
+  padding-top: 58px;
 }
 
 .filters {
@@ -590,25 +591,25 @@ margin-right: 46px;
 .filter-group {
   padding: 0;
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 29px;
 
   border: none;
 }
 
 .filter-group:first-child {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 29px;
 }
 
 .filter-group legend {
-  margin-bottom: 22px;
+  margin-bottom: 19px;
 
   font-size: 18px;
-  line-height: 30px;
+  line-height: 25px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -622,7 +623,7 @@ margin-right: 46px;
 }
 
 .filter-item {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding-left: 37px;
 }
 
@@ -827,13 +828,15 @@ margin-right: 46px;
 .catalog-sorting {
   display: flex;
   margin: 0;
-  margin-bottom: 57px;
+  margin-bottom: 50px;
 }
 
 .catalog-sorting b {
   padding: 0;
   margin: 0;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
@@ -847,12 +850,15 @@ margin-right: 46px;
 .sorting-buttons {
   display: flex;
   justify-content: space-between;
-  width: 271px;
+  width: 272px;
   align-items: flex-end;
+  align-items: center;
   margin: 0;
-  margin-right: 62px;
+  margin-right: 50px;
   margin-left: 267px;
   padding: 0;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .sorting-option {
@@ -867,6 +873,14 @@ margin-right: 46px;
   color: rgba(0,0,0,0.6);
 }
 
+.sorting-option:active {
+ color: #000000;
+}
+
+.sorting-option.active {
+  color: #000000;
+}
+
 .sorting-range {
   display: flex;
   justify-content: space-between;
@@ -875,16 +889,12 @@ margin-right: 46px;
   width: 41px;
 }
 
-.sorting-option:active {
- color: #000000;
-}
-
  .sorting-btn {
   display: inline-block;
   width: 11px;
-  height: 10px;
-  vertical-align: center;
-  opacity: 0,3;
+  height: 13px;
+  vertical-align: middle;
+  opacity: 0.3;
 }
 
 .sorting-btn-up {
@@ -903,7 +913,7 @@ margin-right: 46px;
 
 .description-hover h3 {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 
 .catalog-item-title {
@@ -919,7 +929,6 @@ margin-right: 46px;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
 
   list-style: none;
 }
@@ -927,7 +936,8 @@ margin-right: 46px;
 .catalog-item {
   position: relative;
   width: 360px;
-  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 25px;
   margin-right: 40px;
 
   background-color: #ffffff;
@@ -961,8 +971,10 @@ margin-right: 46px;
 
 .description-hover p {
   display: block;
+  width: 232px;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
+  line-height: 18px;
 }
 
 .description-hover {
@@ -970,13 +982,13 @@ margin-right: 46px;
 
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 6px;
   width: 100%;
   margin: 0;
-  padding-bottom: 43px;
-  padding-top: 35px;
-  padding-left: 67px;
+  padding-top: 28px;
   padding-right: 67px;
+  padding-left: 67px;
+  padding-bottom: 43px;
   text-align: center;
 
   background-color: #eeeeee;
@@ -988,7 +1000,7 @@ margin-right: 46px;
  }
 
  .price-btn {
-  padding: 18px 60px;
+  padding: 16px 62px;
   
   background-color: #fb565a;
 }
@@ -1009,6 +1021,7 @@ margin-right: 46px;
 
   padding: 0;
   margin: 0;
+  margin-top: 30px;
 
   list-style: none;
 }
@@ -1117,7 +1130,7 @@ margin-right: 46px;
 
 .discount {
   width: 550px;
-  margin-top: 78px;
+  margin-top: 75px;
 }
 
 .discount b {
@@ -1188,7 +1201,7 @@ background-color: #d7373b;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 960px;
-  padding-top: 73px 100px 84px; 
+  padding: 73px 100px 84px; 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 }
@@ -1216,21 +1229,35 @@ background-color: #d7373b;
   font-weight: 700; 
 }
 
-.feedback-item input {
-  padding: 14px 16px;
+.feedback-field,
+.feedback-item textarea {
+   padding: 14px 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.5);
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
+  outline-style: none;
 }
 
-.feedback-item input:focus { /*не работает*/
-  color: #444444;
+.feedback-field {
+  width: 360px;
+  margin-bottom: 36px;
+}
+
+.feedback-field:hover,
+.feedback-field:focus,
+.feedback-item textarea:hover,
+.feedback-item textarea:focus { 
+  border: 2px solid #b4b9bb;
+}
+
+.feedback-field:active,
+.feedback-item textarea:active { /*загорается на секунду и исчезает*/
   border: 2px solid #000000;
 }
 
-.feedback-item input:disabled { /*не работает*/
+.feedback-field:disabled { 
   color: #e74246
   border: 2px solid #e74246;
 }
@@ -1240,18 +1267,12 @@ background-color: #d7373b;
   margin-bottom: 13px;
 }
 
-.feedback-name,
-.feedback-email {
-  width: 360px;
-  margin-bottom: 36px;
-}
 
-.feedback-text {
-  margin-bottom: 47px;
+.feedback-item textarea {
   width: 760px;
+  margin-bottom: 47px;
   min-height: 118px;
   vertical-align: top;
-/*как расположить текст подсказки вверху, а не по центру?*/
 }
 
 .feedback-form .btn {
@@ -1273,6 +1294,7 @@ background-color: #d7373b;
 
   background-color: transparent;
   border: 0;
+  outline-style: none;
 
   cursor: pointer;
 }
