@@ -5,7 +5,7 @@
     <title>Дизайн-студия Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
 	<header class="main-header">
@@ -22,12 +22,13 @@
   		  </ul>
   		  <ul class="shopping-navigation">
             <li>
-            	<a class="shopping-cart-link" href="cart.html">Корзина</a>
+              <a class="shopping-cart-link" href="cart.html">Корзина</a>
             </li>
           </ul>
   		</nav>
   	  </div>
   	</header>
+
   	<main class="main-catalog">
   	  <div class="page-title-wrapper">
   	  	<div class="container">
@@ -189,6 +190,7 @@
 	    </div>
 	  </div>
   	</main>
+
   	<footer>
       <div class="map">
         <div class="container">
@@ -196,12 +198,12 @@
   	        <b>Nёrds design studio</b>
   		    <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д.19/8</p>
   		    <p>тел. +7(812)275-75-75</p>
-  		    <a class="btn open-modal-btn" href="#">Напишите нам</a>
+  		    <a class="btn open-modal-btn" href="write-us.html">Напишите нам</a>
   	      </div>
   	    </div>
-  	    <iframe src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" width="100%" height="416" frameborder="1" allowfullscreen="true"></iframe>
+  	    <iframe src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" allowfullscreen="true"></iframe>
   	    <div class="map-img">
-  	      <img src="img/map.jpg" width="100%" height="416" alt="Офис компании по адресу ул.Большая Конюшенная, д.19/8, Санкт-Петербург"> 
+  	      <img src="img/map.jpg" width="1440" height="416" alt="Офис компании по адресу ул.Большая Конюшенная, д.19/8, Санкт-Петербург"> 
   	    </div>
   	  </div>
   	  <div class="container">
@@ -224,7 +226,8 @@
   	    </div>
   	  </div>
   	</footer>
-  		<div class="feedback">
+
+  	<div class="feedback">
       <h2>Напишите нам</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       	<p class="feedback-item">
@@ -237,14 +240,14 @@
         </p>
         <p class="feedback-item">
           <label for="feedback-text">Текст письма:</label>
-      	  <textarea id="feedback-text" type="text" name="text-of-the-letter" placeholder="В свободной форме"></textarea>  
+      	  <textarea id="feedback-text" name="text-of-the-letter" placeholder="В свободной форме"></textarea>  
       	</p>  
       	<button class="btn" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="btn">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </div>
     
-    <script src="js/popup-mini.js"></script>
+    <script src="js/popup.min.js"></script>
    
   </body>
 </html>

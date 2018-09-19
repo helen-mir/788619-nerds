@@ -4,7 +4,7 @@ var popup = document.querySelector(".feedback");
 var close = popup.querySelector(".modal-close");
 
 var form = popup.querySelector("form");
-var name = popup.querySelector("[name=name]");
+var loginName = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 
 var isStorageSupport = true;
@@ -21,10 +21,10 @@ link.addEventListener("click", function (evt) {
   popup.classList.add("feedback-show");
 
   if (storage) {
-    name.value = storage;
+    loginName.value = storage;
     email.focus();
   } else {
-    name.focus();
+    loginName.focus();
   }
 });
 
@@ -35,14 +35,14 @@ close.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-  if (!name.value || !email.value) {
+  if (!loginName.value || !email.value) {
     evt.preventDefault();
     popup.classList.remove("feedback-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("feedback-error");
   } else {
     if (isStorageSupport) {	
-      localStorage.setItem("name", name.value);
+      localStorage.setItem("loginName", loginName.value);
     }
   }
 });
