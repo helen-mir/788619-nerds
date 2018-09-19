@@ -260,12 +260,6 @@ img {
           box-sizing: content-box;
 }
 
-#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
-#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
-#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
-  content: "";
-}
-
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
