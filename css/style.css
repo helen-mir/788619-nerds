@@ -73,7 +73,16 @@ img {
 }
 
 .main-header-logo {
-   width: 165px;
+  width: 165px;
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+  opacity: 0.8;
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
 }
 
 .container {
@@ -111,6 +120,10 @@ img {
   text-align: center;
 }
 
+.site-navigation li {
+  margin-bottom: 17px;
+}
+
 .site-navigation li:not(:nth-child(4n)) {
   margin-right: 46px;
 }
@@ -132,7 +145,9 @@ img {
 .site-navigation a:active,
 .shopping-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
+}
 
+.active-page {
   border-bottom: 2px solid #fb565a;
 }
 
@@ -162,8 +177,9 @@ img {
 
 .slider-controls {
   position: absolute;
-  left: 45.5%; 
+  left: 50.5%; 
   bottom: 96px;
+  transform: translateX(-50%);
   z-index: 100;
   
   width: 160px;
@@ -305,9 +321,9 @@ img {
 
 .slider-item-btn {
   color: #ffffff;
-  padding-left: 55px;
-  padding-right: 55px;
-  width: 242px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 240px;
 
   background-color: #fb565a;
 }
@@ -1328,6 +1344,10 @@ img {
           box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
+.social-button:active svg {
+  opacity:0.3;
+}
+
 .footer-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1506,14 +1526,12 @@ img {
 }
 
 .feedback-field:hover,
-.feedback-field:focus,
-.feedback-item textarea:hover,
-.feedback-item textarea:focus { 
+.feedback-item textarea:hover { 
   border: 2px solid #b4b9bb;
 }
 
-.feedback-field:active,
-.feedback-item textarea:active { /*загорается на секунду и исчезает*/
+.feedback-field:focus,
+.feedback-item textarea:focus {
   border: 2px solid #000000;
 }
 
