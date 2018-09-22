@@ -181,7 +181,7 @@ img {
   bottom: 96px;
   transform: translateX(-50%);
   z-index: 100;
-  
+
   width: 160px;
   height: 18px;
 
@@ -191,31 +191,31 @@ img {
 
 .slider-controls label {
   position: relative;
-  
+
   display: inline-block;
   vertical-align: top;
   width: 18px;
   height: 18px;
   padding: 8px;
   margin-right: 17px;
-  
+
   border-radius: 50%;
   cursor: pointer;
 }
 
 .slider-controls label::after {
   content: "";
-  
+
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  
+
   width: 18px;
   height: 18px;
-  
+
   background: #ffffff;
-  
+
   border-radius: 50%;
 }
 
@@ -303,7 +303,7 @@ img {
   vertical-align: top;
   padding-top: 17px;
   padding-bottom: 15px;
-  
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -311,7 +311,7 @@ img {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  
+
   border-radius: 3px;
   border: none;
   outline-style: none;
@@ -379,7 +379,6 @@ img {
 .products-item h3 {
   margin-top: 18px;
   margin-bottom: 16px;
-
 
   font-size: 24px;
   line-height: 30px;
@@ -580,7 +579,7 @@ img {
   display: block;
 }
 
-.partners-item { /*не попадают по перфекту*/
+.partners-item {
   position: relative;
   margin-right: 18px;
   width: 280px;
@@ -708,15 +707,15 @@ img {
 
 .range-controls {
   position: relative;
-  
+
   height: 80px;
   margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  
+
   background-color: #f1f1f1;
-  
+
   border-radius: 5px;
 }
 
@@ -737,7 +736,7 @@ img {
   position: absolute;
   top: 31px;
   left: 0;
-  
+
   width: 20px;
   height: 20px;
   padding: 0;
@@ -766,7 +765,7 @@ img {
   display: inline-block;
   vertical-align: top;
   width: 50%;
-  
+
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -775,12 +774,12 @@ img {
   width: 80px;
   padding: 8px 10px;
   margin-left: 10px;
-  
+
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   text-align: center;
   color: #283136;
-  
+
   border: none;
   border-radius: 5px;
   background: #f1f1f1;
@@ -820,7 +819,7 @@ img {
 
   width: 25px;
   height: 25px;
-  
+
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   opacity: 0.4;
@@ -1178,7 +1177,7 @@ img {
   background-color: #d5d5d5;
 }
 
-.pagination-item-current a { /*все равно что-то не то*/
+.pagination-item-current a {
   background-color: #ffffff;
 
   border: 3px solid #dbdbdb;
